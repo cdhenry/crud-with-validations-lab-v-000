@@ -7,4 +7,4 @@
 <% if @song.released %>
   <p>release year: <%= @song.release_year %></p>
 <% end %>
-<%= link_to "Delete", destroy_song_path(@song), method: :delete, data: { confirm: "Really?" } %>
+<%= link_to "Delete", delete_song_path(@song), method: :delete, data: { confirm: "Really?" } %>
