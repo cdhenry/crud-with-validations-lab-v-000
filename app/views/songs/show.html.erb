@@ -7,4 +7,5 @@
 <% if @song.released %>
   <p>release year: <%= @song.release_year %></p>
 <% end %>
-<%= link_to "Delete", @song, method: :delete, data: { confirm: "Really?" } %>
+<%= form_tag people_path(@person.id), method: "delete" %>
+  <%= submit_tag "Delete #{@person.name}" %>
