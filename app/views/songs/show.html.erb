@@ -7,5 +7,4 @@
 <% if @song.released %>
   <p>release year: <%= @song.release_year %></p>
 <% end %>
-<% @song.each do |person| %>
 <%= link_to "Delete", person, method: :delete, data: { confirm: "Really?" } %>
