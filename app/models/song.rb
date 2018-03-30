@@ -1,5 +1,6 @@
 class Song < ActiveRecord::Base
   validates :title, presence: true
+  validates :title, uniqueness: true if self.find_by(release_year: release_year)
   validate :title_cannot_be_repeated_in_same_year
   validates :released, format: { with: /true|false/ }
   validates :release_year, presence: true, if: 'released == true'
